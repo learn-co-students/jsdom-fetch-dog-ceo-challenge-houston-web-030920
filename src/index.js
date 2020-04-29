@@ -20,8 +20,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     })
   })
 
-
-
   //function to create list of breeds in ul
   let createBreedLi = (breed)=>{
     let liTag = document.createElement('li')
@@ -48,7 +46,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     //display select dog breeds by removing previous list from ul
     let selectOption = document.querySelector('#breed-dropdown')
-    
+
     selectOption.addEventListener('change', (e)=>{
       let value = e.target.value
       let liTags = document.querySelectorAll('li')
