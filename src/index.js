@@ -18,9 +18,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const renderBreedLi = function(breed){
+    console.log(breed)
     let breedUl = document.querySelector('#dog-breeds')
     let breedLi = document.createElement('li')
-    breedLi.innerHTML = breed
+    breedLi.innerText = breed
     breedLi.addEventListener('click', function () {
         breedLi.style.color = "green"
     })
@@ -41,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
             let selectBox = document.querySelector('#breed-dropdown')
             selectBox.addEventListener('change', function(){
                 let breedUl = document.querySelector('#dog-breeds')
-                breedUl.innerHTML = ''
+                breedUl.innerText = ''
                 for (let breed in breeds.message) {
                     if(breed.startsWith(selectBox.value)){
                         renderBreedLi(breed)
